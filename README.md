@@ -1,15 +1,25 @@
-# api-rest
+# API REST associée à l'application cross-platforms Todolist développée avec FLutter
 
-To install dependencies:
+- Installation des dépendances NPM
 
 ```bash
 bun install
 ```
 
-To run:
+- Démarrage de l'API
 
 ```bash
 bun run src/index.ts
 ```
 
-This project was created using `bun init` in bun v1.1.26. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+--
+
+!["Logotype Shrp"](https://sherpa.one/images/sherpa-logotype.png)
+
+__Alexandre Leroux__  
+_Enseignant / Formateur_  
+_Développeur logiciel web & mobile_
+
+Nancy (Grand Est, France)
+
+<https://shrp.dev>
