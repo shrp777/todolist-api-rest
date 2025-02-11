@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Todolist API Doc",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

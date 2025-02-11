@@ -1,0 +1,22 @@
+meta {
+  name: Create Task
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/tasks
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "content": "Apprendre Dart",
+      "deadline": "2024-02-20T00:00:00.000Z"
+  }
+}
