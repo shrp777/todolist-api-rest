@@ -1,5 +1,7 @@
 # API REST associée à l'application cross-platforms Todolist développée avec FLutter
 
+API REST avec Bun + Hono + Base de données SQLite pour la réalisation du projet d'application cross-platforms Todolist avec Flutter
+
 - Installation des dépendances NPM
 
 ```bash
