@@ -10,7 +10,7 @@ route.get("/", (c) => {
   return c.json(tasks);
 });
 
-route.get("//:id", (c) => {
+route.get("/:id", (c) => {
   const id = c.req.param("id");
   const task = db.query("SELECT * FROM tasks WHERE id = ?").as(Task).get(id);
   if (!task) return c.json({ error: "Task not found" }, 404);
@@ -38,7 +38,7 @@ route.post("/", async (c) => {
   });
 });
 
-route.put("//:id", async (c) => {
+route.put("/:id", async (c) => {
   const id = c.req.param("id");
   const body = await c.req.json();
   const existing = db
@@ -63,7 +63,7 @@ route.put("//:id", async (c) => {
   return c.json({ message: "Task updated successfully" });
 });
 
-route.delete("//:id", (c) => {
+route.delete("/:id", (c) => {
   const id = c.req.param("id");
   const stmt = db.prepare("DELETE FROM tasks WHERE id = ?");
   const result = stmt.run(id);
