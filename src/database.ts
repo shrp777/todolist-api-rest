@@ -1,5 +1,5 @@
 import { Database } from "bun:sqlite";
-const db = new Database("todolist.db");
+const db = new Database(process.env.DATABASE);
 
 db.exec(`
   CREATE TABLE IF NOT EXISTS tasks (

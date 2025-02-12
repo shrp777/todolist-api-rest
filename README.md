@@ -2,6 +2,36 @@
 
 API REST avec Bun + Hono + Base de données SQLite pour la réalisation du projet d'application cross-platforms Todolist avec Flutter
 
+## Installations
+
+- Environnement d'exécution __Bun__ (<https://bun.sh/>) :
+
+  - Sur __Unix__ (MacOS et Linux) :
+
+    ```bash
+    curl -fsSL https://bun.sh/install | bash
+    ```
+
+  - Sur __Windows__ :
+
+    ```bash
+    powershell -c "irm bun.sh/install.ps1 | iex"
+    ```
+
+## Variables d'environnement à renseigner
+
+- Créer un fichier .env à la racine, basé sur le fichier .env.example
+
+## Données SQL à importer dans la base de données SQLite
+
+- Schéma SQL :
+    `./sql/schema.sql`
+
+- Données SQL :
+    `./sql/data.sql`
+
+## Commandes utiles
+
 - Installation des dépendances NPM
 
 ```bash
@@ -11,7 +41,13 @@ bun install
 - Démarrage de l'API
 
 ```bash
-bun run src/index.ts
+bun start
+```
+
+- Démarrage de l'API avec hot reload activé
+
+```bash
+bun watch
 ```
 
 --
