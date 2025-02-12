@@ -1,6 +1,6 @@
-# API REST associée à l'application cross-platforms Todolist développée avec FLutter
+# API REST Todolist
 
-API REST avec Bun + Hono + Base de données SQLite pour la réalisation du projet d'application cross-platforms Todolist avec Flutter
+API REST développée avec Bun + Hono + Base de données SQLite pour la réalisation du projet d'application cross-platforms Todolist avec Flutter.
 
 ## Installations
 
@@ -49,6 +49,10 @@ bun start
 ```bash
 bun watch
 ```
+
+## Test de l'API REST
+
+- Importer la collection __Bruno__ (<https://www.usebruno.com/>) présente dans `./API Doc`.
 
 --
 
