@@ -4,7 +4,7 @@ import tasks from "./routes/tasks";
 
 const app = new Hono();
 
-app.use("*", cors());
+app.use("*", cors()); //autorise les requêtes en provenance de toute origine
 
 app.route("/tasks", tasks);
 

@@ -22,12 +22,12 @@ route.post("/", async (c) => {
   const id = uuidv4();
   const now = new Date().toISOString();
 
-  const stmt = db.prepare(`
+  const statement = db.prepare(`
     INSERT INTO tasks (id, content, status, createdAt, completedAt, deadline)
     VALUES (?, ?, ?, ?, ?, ?)
   `);
 
-  stmt.run(id, body.content, "todo", now, null, body.deadline || null);
+  statement.run(id, body.content, "todo", now, null, body.deadline || null);
 
   return c.json({
     id,
@@ -48,11 +48,11 @@ route.put("/:id", async (c) => {
 
   if (!existing) return c.json({ error: "Task not found" }, 404);
 
-  const stmt = db.prepare(`
+  const statement = db.prepare(`
     UPDATE tasks SET content = ?, status = ?, completedAt = ?, deadline = ? WHERE id = ?
   `);
 
-  stmt.run(
+  statement.run(
     body.content || existing.content,
     body.status || existing.status,
     body.completedAt || existing.completedAt,
@@ -65,8 +65,8 @@ route.put("/:id", async (c) => {
 
 route.delete("/:id", (c) => {
   const id = c.req.param("id");
-  const stmt = db.prepare("DELETE FROM tasks WHERE id = ?");
-  const result = stmt.run(id);
+  const statement = db.prepare("DELETE FROM tasks WHERE id = ?");
+  const result = statement.run(id);
 
   if (result.changes === 0) return c.json({ error: "Task not found" }, 404);
 

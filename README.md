@@ -2,7 +2,7 @@
 
 API REST développée avec Bun + Hono + Base de données SQLite pour la réalisation du projet d'application cross-platforms Todolist avec Flutter.
 
-## Installations
+## Installation
 
 - Environnement d'exécution __Bun__ (<https://bun.sh/>) :
 
