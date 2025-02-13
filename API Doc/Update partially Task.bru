@@ -1,10 +1,10 @@
 meta {
-  name: Update Task
+  name: Update partially Task
   type: http
-  seq: 4
+  seq: 5
 }
 
-put {
+patch {
   url: http://localhost:3000/tasks/2accbc53-ae58-4a94-9afb-ffda70b5c31a
   body: json
   auth: none
@@ -16,8 +16,10 @@ headers {
 
 body:json {
   {
-      "content": "Apprendre Dart & Flutter",
-      "status": "doing",
-      "completedAt": "2024-02-12T00:00:00.000Z"
+      "status": "done"
   }
+}
+
+assert {
+  res.status: eq 200
 }

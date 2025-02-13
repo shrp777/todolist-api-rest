@@ -1,0 +1,30 @@
+meta {
+  name: Update or Create Task
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:3000/tasks/2accbc53-ae58-4a94-9afb-ffda70b5c31a
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "id": "2accbc53-ae58-4a94-9afb-ffda70b5c31a",
+      "content": "Apprendre Dart & Flutter",
+      "status": "doing",
+      "createdAt": "2025-02-11T20:48:09.892Z",
+      "completedAt": "2024-02-12T00:00:00.000Z",
+      "deadline": "2024-02-20T00:00:00.000Z"
+    }
+}
+
+assert {
+  res.status: eq 200
+}

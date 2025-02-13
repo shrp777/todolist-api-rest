@@ -13,3 +13,10 @@ get {
 headers {
   Content-Type: application/json
 }
+
+assert {
+  res.body: isJson
+  res.body.task: isDefined
+  res.body.result: eq success
+  res.status: eq 200
+}

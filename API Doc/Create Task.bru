@@ -20,3 +20,10 @@ body:json {
       "deadline": "2024-02-20T00:00:00.000Z"
   }
 }
+
+assert {
+  res.status: eq 201
+  res.body.result: eq success
+  res.body.task: isDefined
+  res.headers.location: isDefined
+}
